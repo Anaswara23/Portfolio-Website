@@ -1,0 +1,462 @@
+/* BASIC RESET & FONT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* NAVBAR */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  .navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  /* HERO SECTION */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background: #000; /* fallback in case 3D doesn't load */
+  }
+  #three-canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    top: 40%;
+    transform: translateY(-40%);
+    color: #fff;
+  }
+  .hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .hero-cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  .hero-cta:hover {
+    background-color: #0056b3;
+  }
+  
+  /* SECTION STYLES */
+  section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    color: #333;
+  }
+  section h3::after {
+    content: "";
+    display: block;
+    margin: 0.5rem auto;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+  }
+  
+  /* ABOUT */
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .about-text {
+    max-width: 600px;
+  }
+  .about-text p {
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .service-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .service-box:hover {
+    transform: translateY(-5px);
+  }
+  .service-box h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  /* WORK EXPERIENCE (TIMELINE) */
+#work-experience {
+    margin-top: 3rem;
+  }
+  
+ 
+  
+  .work-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0.5rem auto 2rem;
+    color: #666;
+  }
+  
+  .timeline-container {
+    position: relative;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 800px; /* Adjust as needed */
+  }
+  
+  /* Vertical line down the middle (or slightly left) */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 35px; 
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #007bff;
+    border-radius: 2px;
+  }
+  
+  /* Each timeline item */
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 80px; /* To accommodate the icon & vertical line */
+  }
+  
+  /* The round icon for each item */
+  .timeline-icon {
+    position: absolute;
+    left: 15px; 
+    /* Center it horizontally over the line:
+       If your line is at left: 35px, an icon width ~50px => 35-25 => 10px offset, 
+       adjust as needed for a perfect center. */
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* So the logo doesn't overflow the circle */
+  }
+  
+  /* The company logo inside the icon */
+  .timeline-icon img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* The content box for each item */
+  .timeline-content {
+    background-color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  
+  /* Date displayed above the role title */
+  .timeline-date {
+    font-size: 0.85rem;
+    color: #999;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content h4 span {
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  /* The bullet list inside each content */
+  .timeline-content ul {
+    list-style: disc;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .timeline-content ul li {
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  /* Extra text or links */
+  .timeline-extra {
+    margin-top: 1rem;
+    color: #555;
+  }
+  
+  /* Hover effect if desired */
+  .timeline-item:hover .timeline-content {
+    transform: translateY(-3px);
+    transition: transform 0.2s;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .timeline-container::before {
+      left: 25px;
+    }
+    .timeline-item {
+      padding-left: 70px;
+    }
+    .timeline-icon {
+      left: 5px;
+    }
+  }
+  
+  
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .project-info {
+    padding: 1rem;
+  }
+  .project-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  /* TESTIMONIALS */
+  .testimonials-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  .testimonial {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    width: 320px;
+    padding: 1.5rem;
+    position: relative;
+  }
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .testimonial-header .profile {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+  }
+  .testimonial-header h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  .testimonial-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .short-text {
+    overflow: hidden;
+    display: -webkit-box; /* Required for webkit browsers */
+    -webkit-line-clamp: 2; /* Show only 2 lines */
+    -webkit-box-orient: vertical; /* Maintain vertical layout */
+    line-clamp: 2; /* Standard property */
+    box-orient: vertical; /* Standard property for older browsers */
+}
+
+  .full-text.hidden {
+    display: none; /* Hide the full text by default */
+  }
+  .read-more-btn {
+    background: none;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  /* CONTACT */
+  .contact-desc {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  .contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+  }
+  footer a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.5rem;
+  }
+  footer a:hover {
+    color: #fff;
+  }
+  
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .hero-section {
+      height: 500px;
+    }
+    .hero-text {
+      top: 35%;
+      transform: translateY(-35%);
+      padding: 0 1rem;
+    }
+    .about-content {
+      flex-direction: column;
+    }
+    .profile-pic {
+      margin-bottom: 1rem;
+    }
+  }
+  

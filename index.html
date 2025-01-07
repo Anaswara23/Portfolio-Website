@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Anaswara Raghuthaman - Portfolio</title>
+
+  <!-- Google Fonts (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <nav class="navbar">
+      <h1>Anaswara Raghuthaman</h1>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <!-- Resume opens in a new tab -->
+        <a href="files/MyResume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION with Three.js Canvas -->
+  <section class="hero-section">
+    <!-- 3D canvas container -->
+    <div id="three-canvas-container"></div>
+    <div class="hero-text">
+      <h2>Hello World! 
+        I'm Anaswara Raghuthaman</h2>
+      <p>
+        A passionate <strong>Software Engineer</strong> creating modern, performant, 
+        and visually stunning digital experiences.
+      </p>
+      <a href="#contact" class="hero-cta">Let's Connect</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h3>About Me</h3>
+    <div class="about-content">
+      <img
+        src="mypic.png"
+        alt="Your Portrait"
+        class="profile-pic"
+      />
+      <div class="about-text">
+        <p>
+          Hey there! I’m Anaswara Raghuthaman, a detail-oriented software engineer who loves 
+          building scalable web applications and exploring cutting-edge technologies. 
+          From crafting sleek front-end interfaces to designing robust back-end 
+          architectures, I enjoy every step of the development process.
+        </p>
+        <p>
+          When I’m not coding, you’ll find me making new friends, vlogging or travelling to a new place!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h3>Services</h3>
+    <div class="services-grid">
+      <div class="service-box">
+        <h4>Web Development</h4>
+        <p>
+          Modern, responsive, and secure websites powered by best practices 
+          and the latest technologies.
+        </p>
+      </div>
+      <div class="service-box">
+        <h4>3D Integration</h4>
+        <p>
+          Enhance your site’s interactivity with 3D models, animations, and 
+          immersive experiences using Three.js.
+        </p>
+      </div>
+      <div class="service-box">
+        <h4>API & Integrations</h4>
+        <p>
+          I connect your product with third-party services for a seamless, 
+          feature-packed user experience.
+        </p>
+      </div>
+      <div class="service-box">
+        <h4>Consulting</h4>
+        <p>
+          Ready to tackle your biggest software challenges? I'll help you 
+          strategize and build the right solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE SECTION -->
+<section id="work-experience">
+    <h3>Work Experience</h3>
+    <p class="work-intro">
+      I enjoy working on challenging projects with talented people!
+    </p>
+  
+    <div class="timeline-container">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <!-- Company logo (50x50 or so). Adjust size in CSS as needed -->
+          <img src="https://via.placeholder.com/50" alt="Company Logo" />
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">June 2024 - August 2024</span>
+          <h4>Software Engineer Intern <span>@ Microsoft x Cyborg Mobile</span></h4>
+          <ul>
+            <li>Led a team of 5 in developing a full-stack web application leveraging OpenCV & MediaPipe.</li>
+            <li>Designed backend architecture using Flask, integrating two AI models as API calls (90% success rate).</li>
+            <li>Integrated Azure AI services for advanced text-to-speech accessibility features.</li>
+          </ul>
+          <p class="timeline-extra">
+            <strong>Showcase Video:</strong><br />
+            <a href="https://youtube.com/" target="_blank">Watch on YouTube</a>
+          </p>
+        </div>
+      </div>
+  
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <img src="https://via.placeholder.com/50" alt="Company Logo" />
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">Sep 2022 - Oct 2022</span>
+          <h4>Agile Methodology Virtual Experience Program <span>@ Cognizant</span></h4>
+          <ul>
+            <li>Completed practical modules: Waterfall vs Agile, User Stories, Ceremonies, Tools & Concepts.</li>
+            <li>Performed agile methodology reviews and used curve-ball scenarios to practice real-world constraints.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <img src="https://via.placeholder.com/50" alt="Company Logo" />
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">Jul 2022 - Aug 2022</span>
+          <h4>Technology Consulting Virtual Internship <span>@ Deloitte</span></h4>
+          <ul>
+            <li>Designed a business case for a cloud-based solution, factoring feasibility and ROI.</li>
+            <li>Worked on cloud readiness assessments and solution architecture presentations.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Timeline Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <img src="https://via.placeholder.com/50" alt="Company Logo" />
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">Feb 2022 - Mar 2022</span>
+          <h4>Cybersecurity Virtual Experience Program <span>@ Mastercard</span></h4>
+          <ul>
+            <li>Designed a phishing email simulation and interpreted simulation results for risk analysis.</li>
+            <li>Learned best practices in securing data and building secure application infrastructures.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Project 1"
+          class="project-image"
+        />
+        <div class="project-info">
+          <h4>Project One</h4>
+          <p>
+            A sleek, fast-loading web platform built with React and Node.js, 
+            featuring real-time data visualization.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Project 2"
+          class="project-image"
+        />
+        <div class="project-info">
+          <h4>Project Two</h4>
+          <p>
+            A mobile-friendly e-commerce site built with Next.js and integrated 
+            with popular payment gateways.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Project 3"
+          class="project-image"
+        />
+        <div class="project-info">
+          <h4>Project Three</h4>
+          <p>
+            An interactive 3D product configurator using Three.js, enabling users 
+            to customize and preview items in real-time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials">
+    <h3>Testimonials</h3>
+    <div class="testimonials-wrapper">
+      <!-- Example of a testimonial with "Read More" -->
+      <div class="testimonial">
+        <div class="testimonial-header">
+          <img
+            src="https://via.placeholder.com/60"
+            alt="Person 1"
+            class="profile"
+          />
+          <h5>Chris Johnson, Product Manager</h5>
+        </div>
+        <!-- We’ll show only a shorter excerpt by default. -->
+        <p class="testimonial-text short-text">
+          “[Your Name] consistently delivers high-quality code under tight deadlines. 
+          He took the time to fully understand our complicated architecture before 
+          diving in, which was impressive... ”
+        </p>
+        <!-- The full text is hidden initially. -->
+        <p class="testimonial-text full-text hidden">
+          “...[Your Name] consistently delivers high-quality code under tight deadlines. 
+          He took the time to fully understand our complicated architecture before diving in, 
+          which was impressive. Because of his diligence and attention to detail, our 
+          application now runs faster and is more reliable than ever. I truly believe he 
+          is an asset to any software team—he’s collaborative, creative, and passionate 
+          about what he does.”
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+
+      <!-- You can replicate the above structure for more testimonials -->
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h3>Contact</h3>
+    <p class="contact-desc">
+      Ready to discuss your next big project or just want to say hello?
+      <br />
+      Feel free to drop me a message or connect via social media.
+    </p>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+    <p>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a> |
+      <a href="https://github.com/yourprofile" target="_blank" rel="noopener">GitHub</a> |
+      <a href="#contact">Email</a>
+    </p>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
